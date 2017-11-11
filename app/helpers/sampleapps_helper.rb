@@ -1,0 +1,2 @@
+module SampleappsHelper
+end

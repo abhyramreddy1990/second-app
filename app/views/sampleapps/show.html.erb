@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fname:</strong>
+  <%= @sampleapp.Fname %>
+</p>
+
+<p>
+  <strong>Lname:</strong>
+  <%= @sampleapp.Lname %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @sampleapp.Gender %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @sampleapp.Address %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @sampleapp.Country %>
+</p>
+
+<%= link_to 'Edit', edit_sampleapp_path(@sampleapp) %> |
+<%= link_to 'Back', sampleapps_path %>

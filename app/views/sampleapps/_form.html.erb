@@ -1,0 +1,39 @@
+<%= form_for(sampleapp) do |f| %>
+  <% if sampleapp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sampleapp.errors.count, "error") %> prohibited this sampleapp from being saved:</h2>
+
+      <ul>
+      <% sampleapp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+
+<p>
+<%= f.label :Fname %>
+<%= f.text_field :Fname%>
+</p>
+<p>
+<%= f.label :Lname %>
+<%= f.text_field :Lname%>
+</p>
+<p>
+<%= f.label :Gender %>
+<%= f.radio_button :Gender,'male', :checked => true %>Male
+<%= f.radio_button :Gender,'female' %>Female
+</p>
+<p>
+<%= f.label :Address %>
+<%= f.text_area :Address,:cols =>"39" ,:rows =>"7" %>
+</p>
+<p>
+<%= f.label :Country %>
+<%= f.select :Country,["india","USA","london","paris"]%>
+ </p>
+<%=f.submit "submit" , :class => 'btn btn-default' %>
+
+<% end %>
+  
